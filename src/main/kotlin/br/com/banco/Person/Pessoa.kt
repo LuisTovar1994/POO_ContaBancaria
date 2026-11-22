@@ -1,6 +1,5 @@
-package br.com.banco
-
-abstract class Pessoa(
+package br.com.banco.Person
+open class Pessoa(
     val nome: String,
     cpf: String,
     val telefone: String,
