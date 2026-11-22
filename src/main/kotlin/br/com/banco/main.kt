@@ -1,6 +1,6 @@
 package br.com.banco
 
-import br.com.banco.Account.ContaCorrente
+import br.com.banco.Account.AccountsTypes.ContaCorrente
 import br.com.banco.Person.Cliente
 import java.math.BigDecimal
 
@@ -21,6 +21,27 @@ fun main (){
         "Conta Corrente",
         BigDecimal.ZERO
     )
+    //criando segundo cliente
+    val segundoCliente = Cliente(
+        "Luis",
+        "78959401943",
+        "64890317283",
+        "04/11/1987"
+    )
+    val cc01_SegundoCliente = ContaCorrente(
+        "73819-1",
+        segundoCliente,
+        "Conta Corrente",
+        BigDecimal.ZERO
+    )
+    // primeiro Cliente
+    cc01_PrimeiroCliente.depositar(BigDecimal("100.00"))
+    cc01_PrimeiroCliente.sacar(BigDecimal("50.00"))
+
     cc01_PrimeiroCliente.exibirDados()
+
+    // Segundo Cliente
+
+    cc01_SegundoCliente.exibirDados()
 
 }
