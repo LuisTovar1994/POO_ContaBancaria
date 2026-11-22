@@ -1,4 +1,4 @@
-package br.com.banco.Account
+package br.com.banco.Account.AccountsTypes
 
 import br.com.banco.Person.Cliente
 import java.math.BigDecimal
@@ -23,9 +23,11 @@ class ContaPoupanca (
     override val saldoDisponivel: BigDecimal
         get() = saldo
 
+
     fun aplicarRndimento(){
         val rendimento = saldo.multiply(taxaRendimento)
         saldo = saldo.add(rendimento).setScale(2, RoundingMode.HALF_UP)
     }
+
 
 }

@@ -1,7 +1,5 @@
 package br.com.banco.Person
 
-import br.com.banco.Account.Conta
-
 class Cliente(
     nome: String,
     cpf: String,

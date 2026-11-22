@@ -1,4 +1,4 @@
-package br.com.banco.Account
+package br.com.banco.Account.AccountsTypes
 
 import br.com.banco.Person.Cliente
 import java.math.BigDecimal
@@ -20,9 +20,12 @@ class ContaCorrente(
     override val saldoDisponivel: BigDecimal
         get() = saldo.add(limite)
 
+
     fun atualizarLimite(novoLimite: BigDecimal){
         require(novoLimite >= BigDecimal.ZERO){"O limite não pode ser negativo."}
         limite = novoLimite
     }
+
+
 
 }
